@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Phone, Mail, MapPin } from 'lucide-react';
 import { useIsMobile } from '../hooks/use-mobile';
@@ -10,7 +11,7 @@ const Contact = () => {
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="inline-block bg-amber-100 text-amber-600 font-medium px-4 py-1.5 rounded-full text-sm mb-4">
+          <div className="inline-block bg-[#1e3a8a]/10 text-[#1e3a8a] font-medium px-4 py-1.5 rounded-full text-sm mb-4">
             Contato
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6">
@@ -36,10 +37,10 @@ const Contact = () => {
               <h3 className="text-lg font-semibold text-neutral-900 mb-2">WhatsApp</h3>
               <p className="text-neutral-600 mb-4">Atendimento rápido e prático</p>
               <a 
-                href="https://wa.me/5511987654321" 
+                href="https://wa.me/5585996023538" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="bg-black hover:bg-neutral-800 text-amber-400 px-6 py-2 rounded-md inline-flex items-center justify-center gap-2 transition-all font-medium"
+                className="bg-[#1e3a8a] hover:bg-[#1e40af] text-[#f59e0b] px-6 py-2 rounded-md inline-flex items-center justify-center gap-2 transition-all font-medium"
               >
                 <span>Enviar mensagem</span>
               </a>
@@ -48,34 +49,34 @@ const Contact = () => {
           
           {/* Phone Card */}
           <div className="bg-white rounded-xl shadow-sm overflow-hidden animate-fade-in" style={{ animationDelay: '0.1s' }}>
-            <div className="bg-amber-400 p-6 flex items-center justify-center">
+            <div className="bg-[#f59e0b] p-6 flex items-center justify-center">
               <Phone className="w-16 h-16 text-white" />
             </div>
             <div className="p-6 text-center">
               <h3 className="text-lg font-semibold text-neutral-900 mb-2">Telefone</h3>
               <p className="text-neutral-600 mb-4">Fale diretamente conosco</p>
               <a 
-                href="tel:+5511987654321"
-                className="bg-black hover:bg-neutral-800 text-amber-400 px-6 py-2 rounded-md inline-flex items-center justify-center gap-2 transition-all font-medium"
+                href="tel:+5585996023538"
+                className="bg-[#1e3a8a] hover:bg-[#1e40af] text-[#f59e0b] px-6 py-2 rounded-md inline-flex items-center justify-center gap-2 transition-all font-medium"
               >
-                <span>(11) 98765-4321</span>
+                <span>(85) 99602-3538</span>
               </a>
             </div>
           </div>
           
           {/* Email Card */}
           <div className="bg-white rounded-xl shadow-sm overflow-hidden animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            <div className="bg-neutral-800 p-6 flex items-center justify-center">
-              <Mail className="w-16 h-16 text-amber-400" />
+            <div className="bg-[#1e3a8a] p-6 flex items-center justify-center">
+              <Mail className="w-16 h-16 text-[#f59e0b]" />
             </div>
             <div className="p-6 text-center">
               <h3 className="text-lg font-semibold text-neutral-900 mb-2">E-mail</h3>
               <p className="text-neutral-600 mb-4">Envie sua mensagem</p>
               <a 
-                href="mailto:contato@contabilidade.com"
-                className="bg-black hover:bg-neutral-800 text-amber-400 px-6 py-2 rounded-md inline-flex items-center justify-center gap-2 transition-all font-medium"
+                href="mailto:goldensupra86@gmail.com"
+                className="bg-[#1e3a8a] hover:bg-[#1e40af] text-[#f59e0b] px-6 py-2 rounded-md inline-flex items-center justify-center gap-2 transition-all font-medium text-sm"
               >
-                <span>contato@contabilidade.com</span>
+                <span>goldensupra86@gmail.com</span>
               </a>
             </div>
           </div>
@@ -91,7 +92,15 @@ const Contact = () => {
               </div>
               <div>
                 <h4 className="text-lg font-semibold text-neutral-900 mb-2">Endereço</h4>
-                <p className="text-neutral-600">Av. Paulista, 1000 - Bela Vista, São Paulo - SP, 01310-100</p>
+                <p className="text-neutral-600 mb-4">Avenida D, 1289 - Fortaleza, CE</p>
+                <a 
+                  href="https://www.google.com/maps/@-3.763711,-38.6022497,3a,15y,72.96h,89.88t/data=!3m7!1e1!3m5!1s3UrZvGWsOmctwZ6zarfz_w!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0.12328337445850934%26panoid%3D3UrZvGWsOmctwZ6zarfz_w%26yaw%3D72.96216608539466!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI1MDYwMi4wIKXMDSoASAFQAw%3D%3D"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#f59e0b] hover:text-[#d97706] transition-colors underline"
+                >
+                  Ver no Google Maps
+                </a>
               </div>
             </div>
             
@@ -106,12 +115,18 @@ const Contact = () => {
                 </div>
                 <div className="flex justify-between">
                   <span className="text-neutral-600">Sábado:</span>
-                  <span className="font-medium text-neutral-900">09:00 - 13:00</span>
+                  <span className="font-medium text-neutral-900">08:00 - 17:00</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-neutral-600">Domingo:</span>
                   <span className="font-medium text-neutral-900">Fechado</span>
                 </div>
+              </div>
+              
+              <div className="mt-4 p-4 bg-[#fef3c7] rounded-lg">
+                <p className="text-sm text-[#92400e] font-medium">
+                  🚀 Retirada Express: Peças disponíveis em até 2 horas*
+                </p>
               </div>
             </div>
           </div>

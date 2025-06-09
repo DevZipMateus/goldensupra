@@ -7,86 +7,86 @@
 
 @layer base {
   :root {
-    /* Base color (60%): Dark neutral/black */
+    /* Base color (60%): Dark navy blue */
     --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
+    --foreground: 220 91% 15%; /* Dark navy blue */
 
     --card: 0 0% 98%;
-    --card-foreground: 240 10% 3.9%;
+    --card-foreground: 220 91% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
+    --popover-foreground: 220 91% 15%;
 
-    /* Primary (30%): Gold/Amber */
-    --primary: 43 74% 49%; /* Gold */
-    --primary-foreground: 240 5.9% 10%;
+    /* Primary (30%): Gold/Dourado */
+    --primary: 45 93% 47%; /* Gold */
+    --primary-foreground: 220 91% 15%;
 
     --secondary: 0 0% 98%;
-    --secondary-foreground: 240 5.9% 10%;
+    --secondary-foreground: 220 91% 15%;
 
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
+    --muted: 220 13% 95%;
+    --muted-foreground: 220 13% 45%;
 
-    /* Accent (10%): Darker gold */
-    --accent: 43 100% 33%; /* Darker gold */
+    /* Accent (10%): Red */
+    --accent: 0 84% 60%; /* Red */
     --accent-foreground: 0 0% 98%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 43 74% 49%;
+    --border: 220 13% 90%;
+    --input: 220 13% 90%;
+    --ring: 45 93% 47%;
 
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-foreground: 220 91% 15%;
+    --sidebar-primary: 220 91% 15%;
     --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-accent: 220 13% 95%;
+    --sidebar-accent-foreground: 220 91% 15%;
     --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 45 93% 47%;
   }
 
   .dark {
-    --background: 240 10% 3.9%;
+    --background: 220 91% 15%;
     --foreground: 0 0% 98%;
 
-    --card: 240 10% 3.9%;
+    --card: 220 91% 15%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 240 10% 3.9%;
+    --popover: 220 91% 15%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 43 74% 49%; /* Gold */
-    --primary-foreground: 240 5.9% 10%;
+    --primary: 45 93% 47%; /* Gold */
+    --primary-foreground: 220 91% 15%;
 
-    --secondary: 240 3.7% 15.9%;
+    --secondary: 220 84% 20%;
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
+    --muted: 220 84% 20%;
+    --muted-foreground: 220 13% 65%;
 
-    --accent: 43 100% 33%; /* Darker gold */
+    --accent: 0 84% 60%; /* Red */
     --accent-foreground: 0 0% 98%; 
 
-    --destructive: 0 62.8% 30.6%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 43 74% 49%;
+    --border: 220 84% 20%;
+    --input: 220 84% 20%;
+    --ring: 45 93% 47%;
     
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 220 91% 10%;
+    --sidebar-foreground: 220 13% 95%;
+    --sidebar-primary: 45 93% 47%;
+    --sidebar-primary-foreground: 220 91% 15%;
+    --sidebar-accent: 220 84% 20%;
+    --sidebar-accent-foreground: 220 13% 95%;
+    --sidebar-border: 220 84% 20%;
+    --sidebar-ring: 45 93% 47%;
   }
 }
 
@@ -116,11 +116,11 @@
   
   /* Buttons with hover effect */
   .btn-primary {
-    @apply bg-black hover:bg-neutral-900 text-amber-400 px-6 py-3 rounded-md transition-all duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-amber-400/50 shadow-sm;
+    @apply bg-[#1e3a8a] hover:bg-[#1e40af] text-[#f59e0b] px-6 py-3 rounded-md transition-all duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-[#f59e0b]/50 shadow-sm;
   }
   
   .btn-secondary {
-    @apply bg-white hover:bg-gray-50 text-black border border-amber-400/20 px-6 py-3 rounded-md transition-all duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-amber-400/50 shadow-sm;
+    @apply bg-white hover:bg-gray-50 text-[#1e3a8a] border border-[#f59e0b]/20 px-6 py-3 rounded-md transition-all duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-[#f59e0b]/50 shadow-sm;
   }
   
   /* Card hover effects */
@@ -140,7 +140,7 @@
   
   /* Navigation link hover effect */
   .nav-link {
-    @apply relative py-2 px-3 text-gray-700 hover:text-amber-500 transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-amber-500 after:transition-all after:duration-300 hover:after:w-full;
+    @apply relative py-2 px-3 text-gray-700 hover:text-[#f59e0b] transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-[#f59e0b] after:transition-all after:duration-300 hover:after:w-full;
   }
   
   /* Image hover effect */
@@ -154,7 +154,7 @@
   }
   
   .plan-card-popular {
-    @apply bg-gradient-to-br from-white to-amber-50 rounded-xl p-6 md:p-8 shadow-md transition-all duration-300 hover:shadow-lg border border-amber-200 relative;
+    @apply bg-gradient-to-br from-white to-[#fef3c7] rounded-xl p-6 md:p-8 shadow-md transition-all duration-300 hover:shadow-lg border border-[#f59e0b] relative;
   }
   
   /* Feature list */
@@ -163,7 +163,7 @@
   }
   
   .feature-icon {
-    @apply bg-amber-100 p-1.5 rounded-full mr-3 mt-0.5 flex-shrink-0 text-amber-600;
+    @apply bg-[#fef3c7] p-1.5 rounded-full mr-3 mt-0.5 flex-shrink-0 text-[#f59e0b];
   }
   
   /* Floating animation */
@@ -178,8 +178,8 @@
   
   /* Pulse animation for attention */
   @keyframes attention-pulse {
-    0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(217, 169, 24, 0.7); }
-    50% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(217, 169, 24, 0); }
+    0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7); }
+    50% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(245, 158, 11, 0); }
   }
   
   .pulse-attention {

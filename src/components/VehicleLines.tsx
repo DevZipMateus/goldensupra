@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useIsMobile } from '../hooks/use-mobile';
 
@@ -88,9 +89,14 @@ const VehicleLines = () => {
                   ))}
                 </ul>
                 
-                <button className="w-full mt-4 bg-[#1e3a8a] hover:bg-[#1e40af] text-[#f59e0b] px-4 py-2 rounded-md transition-all font-medium text-sm">
+                <a 
+                  href={`https://wa.me/5585996023538?text=Olá! Gostaria de saber mais sobre peças para ${line.name}.`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full mt-4 bg-[#1e3a8a] hover:bg-[#1e40af] text-[#f59e0b] px-4 py-2 rounded-md transition-all font-medium text-sm inline-block text-center"
+                >
                   Ver Peças Disponíveis
-                </button>
+                </a>
               </div>
             </div>
           ))}

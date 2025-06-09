@@ -26,8 +26,6 @@ const team = [{
   delay: '0.3s'
 }];
 const Team = () => {
-  return <section className="section bg-white">
-      
-    </section>;
+  return;
 };
 export default Team;

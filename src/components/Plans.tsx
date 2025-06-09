@@ -104,8 +104,6 @@ const plans = [{
 }];
 const Plans = () => {
   const isMobile = useIsMobile();
-  return <section id="plans" className="section bg-white">
-      
-    </section>;
+  return;
 };
 export default Plans;

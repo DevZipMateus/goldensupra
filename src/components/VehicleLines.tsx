@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useIsMobile } from '../hooks/use-mobile';
 
@@ -28,14 +27,14 @@ const vehicleLines = [
     id: 4,
     name: 'Linha Pesada',
     description: 'Caminhões e veículos de grande porte',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+    image: '/lovable-uploads/e01ec816-5c1d-41a7-8021-3879e08e5ef1.png',
     features: ['Peças para caminhões pesados', 'Componentes de carga', 'Sistemas robustos']
   },
   {
     id: 5,
     name: 'Linha de Motopeças',
     description: 'Peças e acessórios para motocicletas',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+    image: '/lovable-uploads/e2c3c58b-6069-4bef-a545-d9720c2594b0.png',
     features: ['Peças para motos', 'Acessórios de segurança', 'Componentes específicos']
   }
 ];

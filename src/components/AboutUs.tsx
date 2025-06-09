@@ -1,21 +1,14 @@
-
 import React from 'react';
 import { Check, ArrowRight } from 'lucide-react';
-
 const AboutUs = () => {
-  return (
-    <section id="about" className="section bg-gray-50">
+  return <section id="about" className="section bg-gray-50">
       <div className="container-custom">
         <div className="flex flex-col lg:flex-row gap-12 items-center">
           {/* Left Column - Image */}
           <div className="lg:w-1/2 animate-fade-in">
             <div className="relative">
               <div className="bg-[#1e3a8a]/20 w-full h-full absolute -left-6 -top-6 rounded-lg"></div>
-              <img 
-                src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" 
-                alt="Peças automotivas Golden Supra" 
-                className="relative z-10 rounded-lg shadow-lg w-full object-cover h-[400px]"
-              />
+              <img alt="Peças automotivas Golden Supra" className="relative z-10 rounded-lg shadow-lg w-full object-cover h-[400px]" src="https://images.unsplash.com/photo-1606942790567-5783bab8d944?q=80&w=1376&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
               <div className="absolute -bottom-8 -right-8 bg-white rounded-lg shadow-lg p-6 z-20 animate-float">
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center">
@@ -38,22 +31,30 @@ const AboutUs = () => {
             <div className="inline-block bg-[#1e3a8a]/10 text-[#1e3a8a] font-medium px-4 py-1.5 rounded-full text-sm mb-4 animate-fade-in">
               Sobre a Golden Supra
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 animate-fade-in" style={{
+            animationDelay: '0.1s'
+          }}>
               Paixão por carros antigos e importados
             </h2>
-            <p className="text-gray-600 mb-6 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <p className="text-gray-600 mb-6 animate-fade-in" style={{
+            animationDelay: '0.2s'
+          }}>
               Somos apaixonados por carros antigos, nacionais e importados. Estamos aqui para oferecer a melhor experiência 
               em peças automotivas para você. Na Golden Supra Auto Peças temos um estoque completo com peças de alta qualidade 
               para garantir o desempenho e a durabilidade do seu veículo.
             </p>
-            <p className="text-gray-600 mb-8 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+            <p className="text-gray-600 mb-8 animate-fade-in" style={{
+            animationDelay: '0.3s'
+          }}>
               Com anos de experiência no mercado, nossa equipe está pronta para atender as suas demandas com 
               profissionalismo e dedicação, seja para restaurar um clássico ou manter seu carro atual em perfeito funcionamento.
             </p>
             
             {/* Key Points */}
             <div className="space-y-4 mb-8">
-              <div className="flex items-start animate-fade-in" style={{ animationDelay: '0.4s' }}>
+              <div className="flex items-start animate-fade-in" style={{
+              animationDelay: '0.4s'
+            }}>
                 <div className="bg-[#1e3a8a]/10 p-1 rounded-full mr-3 mt-1">
                   <Check className="text-[#1e3a8a]" size={16} />
                 </div>
@@ -63,7 +64,9 @@ const AboutUs = () => {
                 </div>
               </div>
               
-              <div className="flex items-start animate-fade-in" style={{ animationDelay: '0.5s' }}>
+              <div className="flex items-start animate-fade-in" style={{
+              animationDelay: '0.5s'
+            }}>
                 <div className="bg-[#1e3a8a]/10 p-1 rounded-full mr-3 mt-1">
                   <Check className="text-[#1e3a8a]" size={16} />
                 </div>
@@ -73,7 +76,9 @@ const AboutUs = () => {
                 </div>
               </div>
               
-              <div className="flex items-start animate-fade-in" style={{ animationDelay: '0.6s' }}>
+              <div className="flex items-start animate-fade-in" style={{
+              animationDelay: '0.6s'
+            }}>
                 <div className="bg-[#1e3a8a]/10 p-1 rounded-full mr-3 mt-1">
                   <Check className="text-[#1e3a8a]" size={16} />
                 </div>
@@ -84,19 +89,15 @@ const AboutUs = () => {
               </div>
             </div>
             
-            <a 
-              href="#contact" 
-              className="bg-[#1e3a8a] hover:bg-[#1e40af] text-[#f59e0b] px-6 py-3 rounded-md transition-all flex items-center justify-center gap-2 font-medium inline-flex animate-fade-in" 
-              style={{ animationDelay: '0.7s' }}
-            >
+            <a href="#contact" className="bg-[#1e3a8a] hover:bg-[#1e40af] text-[#f59e0b] px-6 py-3 rounded-md transition-all flex items-center justify-center gap-2 font-medium inline-flex animate-fade-in" style={{
+            animationDelay: '0.7s'
+          }}>
               <span>Entre em Contato</span>
               <ArrowRight size={18} />
             </a>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default AboutUs;

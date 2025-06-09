@@ -7,7 +7,7 @@ const Hero = () => {
   
   return (
     <section className="pt-24 pb-8 sm:pt-28 sm:pb-12 md:pt-36 md:pb-20 bg-gradient-to-br from-[#1e3a8a] to-[#1e40af] relative overflow-hidden">
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center opacity-10"></div>
+      <div className="absolute inset-0 bg-[url('https://carrosbemmontados.com.br/wp-content/uploads/2023/12/TOYOTA-SUPRA-MK4-1-1536x960.jpg.webp')] bg-cover bg-center opacity-10"></div>
       
       {/* Decorative elements */}
       <div className="absolute top-20 sm:top-40 right-5 sm:right-10 w-48 h-48 sm:w-72 sm:h-72 bg-[#f59e0b]/10 rounded-full blur-3xl"></div>

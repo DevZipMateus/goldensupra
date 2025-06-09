@@ -21,7 +21,7 @@ const vehicleLines = [
     id: 3,
     name: 'Linha Leve',
     description: 'Carros de passeio e veículos urbanos',
-    image: 'https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+    image: '/lovable-uploads/4b5b2cb3-e05a-44a8-b891-12aafce64fd5.png',
     features: ['Peças para carros populares', 'Componentes urbanos', 'Acessórios básicos']
   },
   {

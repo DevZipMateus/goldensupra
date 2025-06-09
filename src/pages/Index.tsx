@@ -4,6 +4,7 @@ import Header from '../components/Layout/Header';
 import Footer from '../components/Layout/Footer';
 import Hero from '../components/Hero';
 import Services from '../components/Services';
+import VehicleLines from '../components/VehicleLines';
 import AboutUs from '../components/AboutUs';
 import Team from '../components/Team';
 import Plans from '../components/Plans';
@@ -24,6 +25,7 @@ const Index = () => {
       <main className="flex-grow">
         <Hero />
         <Services />
+        <VehicleLines />
         <AboutUs />
         <Team />
         <Plans />

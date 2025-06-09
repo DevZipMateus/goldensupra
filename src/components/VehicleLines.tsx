@@ -1,7 +1,6 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import { useIsMobile } from '../hooks/use-mobile';
-import { Pencil } from 'lucide-react';
 
 const vehicleLines = [
   {
@@ -43,26 +42,6 @@ const vehicleLines = [
 
 const VehicleLines = () => {
   const isMobile = useIsMobile();
-  const [lineImages, setLineImages] = useState<Record<number, string>>(
-    vehicleLines.reduce((acc, line) => ({ ...acc, [line.id]: line.image }), {})
-  );
-
-  const handleImageUpload = (lineId: number, event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = (e) => {
-        const result = e.target?.result as string;
-        setLineImages(prev => ({ ...prev, [lineId]: result }));
-      };
-      reader.readAsDataURL(file);
-    }
-  };
-
-  const triggerFileInput = (lineId: number) => {
-    const input = document.getElementById(`file-input-${lineId}`) as HTMLInputElement;
-    input?.click();
-  };
 
   return (
     <section className="py-12 bg-white">
@@ -86,31 +65,13 @@ const VehicleLines = () => {
               className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="relative h-48 overflow-hidden group">
+              <div className="relative h-48 overflow-hidden">
                 <img
-                  src={lineImages[line.id]}
+                  src={line.image}
                   alt={line.name}
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                
-                {/* Edit button */}
-                <button
-                  onClick={() => triggerFileInput(line.id)}
-                  className="absolute top-3 right-3 bg-white/90 hover:bg-white text-gray-800 p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-200 shadow-md"
-                  title="Editar imagem"
-                >
-                  <Pencil size={16} />
-                </button>
-
-                {/* Hidden file input */}
-                <input
-                  id={`file-input-${line.id}`}
-                  type="file"
-                  accept="image/*"
-                  onChange={(e) => handleImageUpload(line.id, e)}
-                  className="hidden"
-                />
                 
                 <div className="absolute bottom-4 left-4 text-white">
                   <h3 className="text-lg font-bold mb-1">{line.name}</h3>

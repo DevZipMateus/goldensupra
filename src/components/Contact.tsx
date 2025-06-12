@@ -92,7 +92,7 @@ const Contact = () => {
               </div>
               <div>
                 <h4 className="text-lg font-semibold text-neutral-900 mb-2">Endereço</h4>
-                <p className="text-neutral-600 mb-4">Av. D, 1289 - Conjunto Esperança, Fortaleza - CE, 60766-000</p>
+                <p className="text-neutral-600 mb-4">Av. D, 1317 - Conj. Ceará, Fortaleza - CE</p>
                 <a 
                   href="https://maps.app.goo.gl/yRimX4g3VtxZvwdJ9"
                   target="_blank"

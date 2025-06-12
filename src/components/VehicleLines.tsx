@@ -5,6 +5,7 @@ import YellowLineCarousel from './YellowLineCarousel';
 import IndustrialLineCarousel from './IndustrialLineCarousel';
 import LightLineCarousel from './LightLineCarousel';
 import HeavyLineCarousel from './HeavyLineCarousel';
+import MotoLineCarousel from './MotoLineCarousel';
 
 const vehicleLines = [
   {
@@ -43,8 +44,9 @@ const vehicleLines = [
     id: 5,
     name: 'Linha de Motopeças',
     description: 'Peças e acessórios para motocicletas',
-    image: '/lovable-uploads/e2c3c58b-6069-4bef-a545-d9720c2594b0.png',
-    features: ['Peças para motos', 'Acessórios de segurança', 'Componentes específicos']
+    features: ['Peças para motos', 'Acessórios de segurança', 'Componentes específicos'],
+    useCarousel: true,
+    carouselType: 'moto'
   }
 ];
 
@@ -82,6 +84,8 @@ const VehicleLines = () => {
                   <LightLineCarousel />
                 ) : line.carouselType === 'heavy' ? (
                   <HeavyLineCarousel />
+                ) : line.carouselType === 'moto' ? (
+                  <MotoLineCarousel />
                 ) : null
               ) : (
                 <div className="relative h-48 overflow-hidden">

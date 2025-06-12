@@ -2,6 +2,7 @@
 import React from 'react';
 import { useIsMobile } from '../hooks/use-mobile';
 import YellowLineCarousel from './YellowLineCarousel';
+import IndustrialLineCarousel from './IndustrialLineCarousel';
 
 const vehicleLines = [
   {
@@ -9,14 +10,16 @@ const vehicleLines = [
     name: 'Linha Amarela',
     description: 'Veículos de transporte público e táxis',
     features: ['Peças para táxis', 'Componentes para ônibus', 'Acessórios específicos'],
-    useCarousel: true
+    useCarousel: true,
+    carouselType: 'yellow'
   },
   {
     id: 2,
     name: 'Linha Industrial',
     description: 'Veículos para uso industrial e comercial',
-    image: 'https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-    features: ['Peças para caminhões', 'Componentes industriais', 'Sistemas hidráulicos']
+    features: ['Peças para caminhões', 'Componentes industriais', 'Sistemas hidráulicos'],
+    useCarousel: true,
+    carouselType: 'industrial'
   },
   {
     id: 3,
@@ -67,7 +70,11 @@ const VehicleLines = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {line.useCarousel ? (
-                <YellowLineCarousel />
+                line.carouselType === 'yellow' ? (
+                  <YellowLineCarousel />
+                ) : line.carouselType === 'industrial' ? (
+                  <IndustrialLineCarousel />
+                ) : null
               ) : (
                 <div className="relative h-48 overflow-hidden">
                   <img

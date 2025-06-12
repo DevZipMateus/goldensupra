@@ -92,9 +92,9 @@ const Contact = () => {
               </div>
               <div>
                 <h4 className="text-lg font-semibold text-neutral-900 mb-2">Endereço</h4>
-                <p className="text-neutral-600 mb-4">Avenida D, 1289 - Fortaleza, CE</p>
+                <p className="text-neutral-600 mb-4">Av. D, 1289 - Conjunto Esperança, Fortaleza - CE, 60766-000</p>
                 <a 
-                  href="https://www.google.com/maps/@-3.763711,-38.6022497,3a,15y,72.96h,89.88t/data=!3m7!1e1!3m5!1s3UrZvGWsOmctwZ6zarfz_w!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0.12328337445850934%26panoid%3D3UrZvGWsOmctwZ6zarfz_w%26yaw%3D72.96216608539466!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI1MDYwMi4wIKXMDSoASAFQAw%3D%3D"
+                  href="https://maps.app.goo.gl/yRimX4g3VtxZvwdJ9"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[#f59e0b] hover:text-[#d97706] transition-colors underline"

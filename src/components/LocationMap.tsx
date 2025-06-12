@@ -1,72 +1,19 @@
 
-import React, { useEffect, useRef, useState } from 'react';
-import mapboxgl from 'mapbox-gl';
-import 'mapbox-gl/dist/mapbox-gl.css';
+import React from 'react';
 
 const LocationMap = () => {
-  const mapContainer = useRef<HTMLDivElement>(null);
-  const map = useRef<mapboxgl.Map | null>(null);
-  const [mapboxToken, setMapboxToken] = useState('');
-
-  useEffect(() => {
-    if (!mapContainer.current || !mapboxToken) return;
-
-    // Initialize map
-    mapboxgl.accessToken = mapboxToken;
-    
-    map.current = new mapboxgl.Map({
-      container: mapContainer.current,
-      style: 'mapbox://styles/mapbox/streets-v12',
-      center: [-38.580611, -3.717222], // Coordenadas da nova localização
-      zoom: 16,
-    });
-
-    // Add marker
-    new mapboxgl.Marker({
-      color: '#f59e0b'
-    })
-    .setLngLat([-38.580611, -3.717222])
-    .setPopup(
-      new mapboxgl.Popup({ offset: 25 })
-        .setHTML('<div class="text-center"><h3 class="font-bold text-[#1e3a8a] mb-1">Golden Supra</h3><p class="text-sm text-gray-600">Fortaleza - CE</p></div>')
-    )
-    .addTo(map.current);
-
-    // Add navigation controls
-    map.current.addControl(
-      new mapboxgl.NavigationControl(),
-      'top-right'
-    );
-
-    // Cleanup
-    return () => {
-      map.current?.remove();
-    };
-  }, [mapboxToken]);
-
-  if (!mapboxToken) {
-    return (
-      <div className="bg-white rounded-xl shadow-sm p-8">
-        <h3 className="text-lg font-semibold text-neutral-900 mb-4">Configuração do Mapa</h3>
-        <p className="text-neutral-600 mb-4">
-          Para visualizar o mapa, insira seu token público do Mapbox:
-        </p>
-        <input
-          type="text"
-          placeholder="Digite seu token do Mapbox aqui..."
-          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#f59e0b] mb-4"
-          onChange={(e) => setMapboxToken(e.target.value)}
-        />
-        <p className="text-sm text-neutral-500">
-          Obtenha seu token em: <a href="https://mapbox.com/" target="_blank" rel="noopener noreferrer" className="text-[#f59e0b] hover:underline">mapbox.com</a>
-        </p>
-      </div>
-    );
-  }
-
   return (
     <div className="bg-white rounded-xl shadow-sm overflow-hidden">
-      <div ref={mapContainer} className="w-full h-96" />
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.227847472983!2d-38.58287842445153!3d-3.717221896281086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c749b5631b7f4f%3A0x2b1c9e4e4a9b0f4e!2sR.%20Antônio%20Augusto%2C%20584%20-%20Vila%20Peri%2C%20Fortaleza%20-%20CE%2C%2060750-000!5e0!3m2!1spt-BR!2sbr!4v1703123456789!5m2!1spt-BR!2sbr"
+        width="100%"
+        height="384"
+        style={{ border: 0 }}
+        allowFullScreen={true}
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+        title="Localização Golden Supra"
+      />
     </div>
   );
 };

@@ -6,12 +6,11 @@ const Hero = () => {
   const isMobile = useIsMobile();
   
   return (
-    <section className="pt-24 pb-8 sm:pt-28 sm:pb-12 md:pt-36 md:pb-20 bg-gradient-to-br from-[#1e3a8a] to-[#1e40af] relative overflow-hidden">
-      <div className="absolute inset-0 bg-[url('https://carrosbemmontados.com.br/wp-content/uploads/2023/12/TOYOTA-SUPRA-MK4-1-1536x960.jpg.webp')] bg-cover bg-center opacity-10"></div>
+    <section className="pt-24 pb-8 sm:pt-28 sm:pb-12 md:pt-36 md:pb-20 relative overflow-hidden">
+      <div className="absolute inset-0 bg-[url('https://carrosbemmontados.com.br/wp-content/uploads/2023/12/TOYOTA-SUPRA-MK4-1-1536x960.jpg.webp')] bg-cover bg-center"></div>
       
-      {/* Decorative elements */}
-      <div className="absolute top-20 sm:top-40 right-5 sm:right-10 w-48 h-48 sm:w-72 sm:h-72 bg-[#f59e0b]/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-5 sm:bottom-10 left-5 sm:left-10 w-48 h-48 sm:w-72 sm:h-72 bg-[#ef4444]/10 rounded-full blur-3xl"></div>
+      {/* Dark overlay for better text readability */}
+      <div className="absolute inset-0 bg-black/30"></div>
       
       <div className="container-custom relative z-10">
         <div className="max-w-4xl mx-auto text-center py-8 sm:py-12 lg:py-[61px]">
@@ -38,7 +37,7 @@ const Hero = () => {
             Peças automotivas de qualidade para carros antigos e importados
           </h1>
           
-          <p className="text-base lg:text-lg text-[#fef3c7] mb-3 lg:mb-4 px-4 animate-fade-in" style={{
+          <p className="text-base lg:text-lg text-gray-100 mb-3 lg:mb-4 px-4 animate-fade-in" style={{
             animationDelay: '0.2s'
           }}>
             Somos apaixonados por carros antigos, nacionais e importados. Oferecemos a melhor experiência em peças automotivas com qualidade OEM garantida.

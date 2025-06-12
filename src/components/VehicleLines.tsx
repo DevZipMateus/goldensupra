@@ -1,14 +1,15 @@
 
 import React from 'react';
 import { useIsMobile } from '../hooks/use-mobile';
+import YellowLineCarousel from './YellowLineCarousel';
 
 const vehicleLines = [
   {
     id: 1,
     name: 'Linha Amarela',
     description: 'Veículos de transporte público e táxis',
-    image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-    features: ['Peças para táxis', 'Componentes para ônibus', 'Acessórios específicos']
+    features: ['Peças para táxis', 'Componentes para ônibus', 'Acessórios específicos'],
+    useCarousel: true
   },
   {
     id: 2,
@@ -65,19 +66,23 @@ const VehicleLines = () => {
               className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="relative h-48 overflow-hidden">
-                <img
-                  src={line.image}
-                  alt={line.name}
-                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                
-                <div className="absolute bottom-4 left-4 text-white">
-                  <h3 className="text-lg font-bold mb-1">{line.name}</h3>
-                  <p className="text-sm opacity-90">{line.description}</p>
+              {line.useCarousel ? (
+                <YellowLineCarousel />
+              ) : (
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src={line.image}
+                    alt={line.name}
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                  
+                  <div className="absolute bottom-4 left-4 text-white">
+                    <h3 className="text-lg font-bold mb-1">{line.name}</h3>
+                    <p className="text-sm opacity-90">{line.description}</p>
+                  </div>
                 </div>
-              </div>
+              )}
               
               <div className="p-6">
                 <ul className="space-y-2">

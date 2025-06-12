@@ -3,6 +3,7 @@ import React from 'react';
 import { useIsMobile } from '../hooks/use-mobile';
 import YellowLineCarousel from './YellowLineCarousel';
 import IndustrialLineCarousel from './IndustrialLineCarousel';
+import LightLineCarousel from './LightLineCarousel';
 
 const vehicleLines = [
   {
@@ -25,8 +26,9 @@ const vehicleLines = [
     id: 3,
     name: 'Linha Leve',
     description: 'Carros de passeio e veículos urbanos',
-    image: '/lovable-uploads/4b5b2cb3-e05a-44a8-b891-12aafce64fd5.png',
-    features: ['Peças para carros populares', 'Componentes urbanos', 'Acessórios básicos']
+    features: ['Peças para carros populares', 'Componentes urbanos', 'Acessórios básicos'],
+    useCarousel: true,
+    carouselType: 'light'
   },
   {
     id: 4,
@@ -74,6 +76,8 @@ const VehicleLines = () => {
                   <YellowLineCarousel />
                 ) : line.carouselType === 'industrial' ? (
                   <IndustrialLineCarousel />
+                ) : line.carouselType === 'light' ? (
+                  <LightLineCarousel />
                 ) : null
               ) : (
                 <div className="relative h-48 overflow-hidden">

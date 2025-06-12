@@ -1,48 +1,38 @@
-
 import React from 'react';
 import { Car, Truck, Wrench, Settings, ArrowRight } from 'lucide-react';
-
-const services = [
-  {
-    id: 1,
-    title: 'Linha Amarela',
-    description: 'Peças especializadas para veículos da linha amarela, incluindo táxis e transporte público.',
-    icon: Car,
-    delay: '0s'
-  },
-  {
-    id: 2,
-    title: 'Linha Industrial',
-    description: 'Componentes robustos para veículos industriais e de trabalho pesado.',
-    icon: Settings,
-    delay: '0.1s'
-  },
-  {
-    id: 3,
-    title: 'Linha Leve',
-    description: 'Peças para carros de passeio, utilitários leves e veículos do dia a dia.',
-    icon: Car,
-    delay: '0.2s'
-  },
-  {
-    id: 4,
-    title: 'Linha Pesada',
-    description: 'Peças para caminhões, ônibus e veículos de grande porte.',
-    icon: Truck,
-    delay: '0.3s'
-  },
-  {
-    id: 5,
-    title: 'Moto Peças',
-    description: 'Componentes especializados para motocicletas de todas as categorias.',
-    icon: Wrench,
-    delay: '0.4s'
-  }
-];
-
+const services = [{
+  id: 1,
+  title: 'Linha Amarela',
+  description: 'Peças especializadas para veículos da linha amarela, incluindo táxis e transporte público.',
+  icon: Car,
+  delay: '0s'
+}, {
+  id: 2,
+  title: 'Linha Industrial',
+  description: 'Componentes robustos para veículos industriais e de trabalho pesado.',
+  icon: Settings,
+  delay: '0.1s'
+}, {
+  id: 3,
+  title: 'Linha Leve',
+  description: 'Peças para carros de passeio, utilitários leves e veículos do dia a dia.',
+  icon: Car,
+  delay: '0.2s'
+}, {
+  id: 4,
+  title: 'Linha Pesada',
+  description: 'Peças para caminhões, ônibus e veículos de grande porte.',
+  icon: Truck,
+  delay: '0.3s'
+}, {
+  id: 5,
+  title: 'Moto Peças',
+  description: 'Componentes especializados para motocicletas de todas as categorias.',
+  icon: Wrench,
+  delay: '0.4s'
+}];
 const Services = () => {
-  return (
-    <section id="services" className="section bg-white">
+  return <section id="services" className="section bg-white my-[86px]">
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -60,19 +50,15 @@ const Services = () => {
         
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {services.map((service) => (
-            <div 
-              key={service.id} 
-              className="bg-white rounded-lg p-8 border border-gray-100 shadow-sm hover:shadow-md hover:border-[#f59e0b] transition-all duration-300 transform hover:scale-[1.02] animate-fade-in"
-              style={{ animationDelay: service.delay }}
-            >
+          {services.map(service => <div key={service.id} className="bg-white rounded-lg p-8 border border-gray-100 shadow-sm hover:shadow-md hover:border-[#f59e0b] transition-all duration-300 transform hover:scale-[1.02] animate-fade-in" style={{
+          animationDelay: service.delay
+        }}>
               <div className="bg-[#1e3a8a]/10 p-4 rounded-lg inline-block mb-5">
                 <service.icon className="text-[#1e3a8a]" size={28} />
               </div>
               <h3 className="text-xl font-semibold mb-3 text-gray-900">{service.title}</h3>
               <p className="text-gray-600">{service.description}</p>
-            </div>
-          ))}
+            </div>)}
         </div>
 
         {/* Features Section */}
@@ -119,19 +105,12 @@ const Services = () => {
         
         {/* CTA */}
         <div className="text-center">
-          <a 
-            href="https://wa.me/5585996023538" 
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-[#1e3a8a] hover:bg-[#1e40af] text-[#f59e0b] px-6 py-3 rounded-md transition-all flex items-center justify-center gap-2 font-medium inline-flex"
-          >
+          <a href="https://wa.me/5585996023538" target="_blank" rel="noopener noreferrer" className="bg-[#1e3a8a] hover:bg-[#1e40af] text-[#f59e0b] px-6 py-3 rounded-md transition-all flex items-center justify-center gap-2 font-medium inline-flex">
             <span>Consulte nossas peças</span>
             <ArrowRight size={18} />
           </a>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Services;

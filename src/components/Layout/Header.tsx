@@ -6,14 +6,20 @@ import { useIsMobile } from '../../hooks/use-mobile';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const isMobile = useIsMobile();
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
+      const heroSection = document.querySelector('section'); // First section is Hero
+      const heroHeight = heroSection ? heroSection.offsetHeight : window.innerHeight;
+      
+      if (window.scrollY > heroHeight - 100) {
+        setIsVisible(true);
         setIsScrolled(true);
       } else {
+        setIsVisible(false);
         setIsScrolled(false);
       }
     };
@@ -29,7 +35,11 @@ const Header = () => {
   };
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-sm py-3' : 'bg-white py-4'}`}>
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      isVisible 
+        ? 'transform translate-y-0 opacity-100 bg-white/95 backdrop-blur-md shadow-sm py-3' 
+        : 'transform -translate-y-full opacity-0'
+    }`}>
       {/* Top Bar with Contact Info and Social Media */}
       <div className="container-custom">
         <div className="flex flex-col md:flex-row md:justify-between items-center mb-4 md:mb-2">

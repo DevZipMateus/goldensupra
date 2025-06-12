@@ -37,11 +37,7 @@ const LocationSection = () => {
                   <h3 className="text-lg font-semibold text-neutral-900 mb-4">Horário de Funcionamento</h3>
                   <div className="space-y-2">
                     <div className="flex justify-between">
-                      <span className="text-neutral-600">Segunda - Sexta:</span>
-                      <span className="font-medium text-neutral-900">08:00 - 18:00</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-neutral-600">Sábado:</span>
+                      <span className="text-neutral-600">Segunda - Sábado:</span>
                       <span className="font-medium text-neutral-900">08:00 - 17:00</span>
                     </div>
                     <div className="flex justify-between">

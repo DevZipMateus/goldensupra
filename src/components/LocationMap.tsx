@@ -17,7 +17,7 @@ const LocationMap = () => {
     map.current = new mapboxgl.Map({
       container: mapContainer.current,
       style: 'mapbox://styles/mapbox/streets-v12',
-      center: [-38.6022519, -3.7637295], // Longitude, Latitude da localização fornecida
+      center: [-38.580611, -3.717222], // Coordenadas da nova localização
       zoom: 16,
     });
 
@@ -25,10 +25,10 @@ const LocationMap = () => {
     new mapboxgl.Marker({
       color: '#f59e0b'
     })
-    .setLngLat([-38.6022519, -3.7637295])
+    .setLngLat([-38.580611, -3.717222])
     .setPopup(
       new mapboxgl.Popup({ offset: 25 })
-        .setHTML('<div class="text-center"><h3 class="font-bold text-[#1e3a8a] mb-1">Golden Supra</h3><p class="text-sm text-gray-600">Av. D, 1317 - Conj. Ceará<br>Fortaleza - CE</p></div>')
+        .setHTML('<div class="text-center"><h3 class="font-bold text-[#1e3a8a] mb-1">Golden Supra</h3><p class="text-sm text-gray-600">Fortaleza - CE</p></div>')
     )
     .addTo(map.current);
 

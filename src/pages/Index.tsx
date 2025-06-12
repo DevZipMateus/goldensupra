@@ -7,6 +7,7 @@ import Services from '../components/Services';
 import VehicleLines from '../components/VehicleLines';
 import AboutUs from '../components/AboutUs';
 import Testimonials from '../components/Testimonials';
+import LocationSection from '../components/LocationSection';
 import Contact from '../components/Contact';
 import FloatingButton from '../components/FloatingButton';
 
@@ -26,6 +27,7 @@ const Index = () => {
         <VehicleLines />
         <AboutUs />
         <Testimonials />
+        <LocationSection />
         <Contact />
       </main>
       

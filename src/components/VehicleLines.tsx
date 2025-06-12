@@ -4,6 +4,7 @@ import { useIsMobile } from '../hooks/use-mobile';
 import YellowLineCarousel from './YellowLineCarousel';
 import IndustrialLineCarousel from './IndustrialLineCarousel';
 import LightLineCarousel from './LightLineCarousel';
+import HeavyLineCarousel from './HeavyLineCarousel';
 
 const vehicleLines = [
   {
@@ -34,8 +35,9 @@ const vehicleLines = [
     id: 4,
     name: 'Linha Pesada',
     description: 'Caminhões e veículos de grande porte',
-    image: '/lovable-uploads/e01ec816-5c1d-41a7-8021-3879e08e5ef1.png',
-    features: ['Peças para caminhões pesados', 'Componentes de carga', 'Sistemas robustos']
+    features: ['Peças para caminhões pesados', 'Componentes de carga', 'Sistemas robustos'],
+    useCarousel: true,
+    carouselType: 'heavy'
   },
   {
     id: 5,
@@ -78,6 +80,8 @@ const VehicleLines = () => {
                   <IndustrialLineCarousel />
                 ) : line.carouselType === 'light' ? (
                   <LightLineCarousel />
+                ) : line.carouselType === 'heavy' ? (
+                  <HeavyLineCarousel />
                 ) : null
               ) : (
                 <div className="relative h-48 overflow-hidden">

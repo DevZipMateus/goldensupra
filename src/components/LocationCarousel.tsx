@@ -68,17 +68,17 @@ const LocationCarousel = () => {
   return (
     <>
       <div className="bg-white rounded-xl shadow-sm overflow-hidden relative">
-        <div className="relative h-48 sm:h-64 md:h-80 lg:h-96 overflow-hidden">
+        <div className="relative h-56 sm:h-72 md:h-80 lg:h-96 bg-gray-50 overflow-hidden">
           <div 
             className="flex transition-transform duration-500 ease-in-out h-full"
             style={{ transform: `translateX(-${currentIndex * 100}%)` }}
           >
             {images.map((image, index) => (
-              <div key={index} className="min-w-full h-full flex-shrink-0">
+              <div key={index} className="min-w-full h-full flex-shrink-0 bg-gray-50 flex items-center justify-center">
                 <img
                   src={image}
                   alt={`Loja Golden Supra - Imagem ${index + 1}`}
-                  className="w-full h-full object-cover cursor-pointer hover:scale-105 transition-transform duration-300"
+                  className="max-w-full max-h-full object-contain cursor-pointer hover:scale-105 transition-transform duration-300"
                   onClick={() => openExpandedView(image)}
                   loading={index === 0 ? "eager" : "lazy"}
                 />

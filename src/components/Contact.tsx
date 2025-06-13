@@ -1,13 +1,9 @@
-
 import React from 'react';
 import { Phone, Mail, MapPin } from 'lucide-react';
 import { useIsMobile } from '../hooks/use-mobile';
-
 const Contact = () => {
   const isMobile = useIsMobile();
-  
-  return (
-    <section id="contact" className="section bg-neutral-100">
+  return <section id="contact" className="section bg-neutral-100">
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
@@ -27,58 +23,31 @@ const Contact = () => {
           {/* WhatsApp Card */}
           <div className="bg-white rounded-xl shadow-sm overflow-hidden animate-fade-in">
             <div className="bg-emerald-500 p-6 flex items-center justify-center">
-              <img 
-                src="/lovable-uploads/1fa16bc1-908d-4a63-9c7f-88a25f117f80.png" 
-                alt="WhatsApp" 
-                className="w-16 h-16"
-              />
+              <img src="/lovable-uploads/1fa16bc1-908d-4a63-9c7f-88a25f117f80.png" alt="WhatsApp" className="w-16 h-16" />
             </div>
             <div className="p-6 text-center">
               <h3 className="text-lg font-semibold text-neutral-900 mb-2">WhatsApp</h3>
               <p className="text-neutral-600 mb-4">Atendimento rápido e prático</p>
-              <a 
-                href="https://wa.me/5585996023538" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="bg-[#1e3a8a] hover:bg-[#1e40af] text-[#f59e0b] px-6 py-2 rounded-md inline-flex items-center justify-center gap-2 transition-all font-medium"
-              >
+              <a href="https://wa.me/5585996023538" target="_blank" rel="noopener noreferrer" className="bg-[#1e3a8a] hover:bg-[#1e40af] text-[#f59e0b] px-6 py-2 rounded-md inline-flex items-center justify-center gap-2 transition-all font-medium">
                 <span>Enviar mensagem</span>
               </a>
             </div>
           </div>
           
           {/* Phone Card - Now leads to WhatsApp */}
-          <div className="bg-white rounded-xl shadow-sm overflow-hidden animate-fade-in" style={{ animationDelay: '0.1s' }}>
-            <div className="bg-[#f59e0b] p-6 flex items-center justify-center">
-              <Phone className="w-16 h-16 text-white" />
-            </div>
-            <div className="p-6 text-center">
-              <h3 className="text-lg font-semibold text-neutral-900 mb-2">Telefone</h3>
-              <p className="text-neutral-600 mb-4">Fale conosco pelo WhatsApp</p>
-              <a 
-                href="https://wa.me/5585996023538"
-                className="bg-[#1e3a8a] hover:bg-[#1e40af] text-[#f59e0b] px-6 py-2 rounded-md inline-flex items-center justify-center gap-2 transition-all font-medium"
-              >
-                <span>Chamar no WhatsApp</span>
-              </a>
-            </div>
+          <div className="bg-white rounded-xl shadow-sm overflow-hidden animate-fade-in" style={{
+          animationDelay: '0.1s'
+        }}>
+            
+            
           </div>
           
           {/* Email Card - Now leads to WhatsApp */}
-          <div className="bg-white rounded-xl shadow-sm overflow-hidden animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            <div className="bg-[#1e3a8a] p-6 flex items-center justify-center">
-              <Mail className="w-16 h-16 text-[#f59e0b]" />
-            </div>
-            <div className="p-6 text-center">
-              <h3 className="text-lg font-semibold text-neutral-900 mb-2">Mensagem</h3>
-              <p className="text-neutral-600 mb-4">Envie sua mensagem</p>
-              <a 
-                href="https://wa.me/5585996023538"
-                className="bg-[#1e3a8a] hover:bg-[#1e40af] text-[#f59e0b] px-6 py-2 rounded-md inline-flex items-center justify-center gap-2 transition-all font-medium"
-              >
-                <span>Enviar pelo WhatsApp</span>
-              </a>
-            </div>
+          <div className="bg-white rounded-xl shadow-sm overflow-hidden animate-fade-in" style={{
+          animationDelay: '0.2s'
+        }}>
+            
+            
           </div>
         </div>
         
@@ -93,12 +62,7 @@ const Contact = () => {
               <div>
                 <h4 className="text-lg font-semibold text-neutral-900 mb-2">Endereço</h4>
                 <p className="text-neutral-600 mb-4">Av. D, 1317 - Conj. Ceará, Fortaleza - CE</p>
-                <a 
-                  href="https://maps.app.goo.gl/yRimX4g3VtxZvwdJ9"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#f59e0b] hover:text-[#d97706] transition-colors underline"
-                >
+                <a href="https://maps.app.goo.gl/yRimX4g3VtxZvwdJ9" target="_blank" rel="noopener noreferrer" className="text-[#f59e0b] hover:text-[#d97706] transition-colors underline">
                   Ver no Google Maps
                 </a>
               </div>
@@ -132,8 +96,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Contact;

@@ -18,7 +18,7 @@ const Contact = () => {
             Entre em contato conosco
           </h2>
           <p className="text-neutral-600 text-lg">
-            Estamos prontos para atender às suas necessidades através dos nossos canais de atendimento.
+            Estamos prontos para atender às suas necessidades através do nosso WhatsApp.
           </p>
         </div>
         
@@ -47,36 +47,36 @@ const Contact = () => {
             </div>
           </div>
           
-          {/* Phone Card */}
+          {/* Phone Card - Now leads to WhatsApp */}
           <div className="bg-white rounded-xl shadow-sm overflow-hidden animate-fade-in" style={{ animationDelay: '0.1s' }}>
             <div className="bg-[#f59e0b] p-6 flex items-center justify-center">
               <Phone className="w-16 h-16 text-white" />
             </div>
             <div className="p-6 text-center">
               <h3 className="text-lg font-semibold text-neutral-900 mb-2">Telefone</h3>
-              <p className="text-neutral-600 mb-4">Fale diretamente conosco</p>
+              <p className="text-neutral-600 mb-4">Fale conosco pelo WhatsApp</p>
               <a 
-                href="tel:+5585996023538"
+                href="https://wa.me/5585996023538"
                 className="bg-[#1e3a8a] hover:bg-[#1e40af] text-[#f59e0b] px-6 py-2 rounded-md inline-flex items-center justify-center gap-2 transition-all font-medium"
               >
-                <span>(85) 99602-3538</span>
+                <span>Chamar no WhatsApp</span>
               </a>
             </div>
           </div>
           
-          {/* Email Card */}
+          {/* Email Card - Now leads to WhatsApp */}
           <div className="bg-white rounded-xl shadow-sm overflow-hidden animate-fade-in" style={{ animationDelay: '0.2s' }}>
             <div className="bg-[#1e3a8a] p-6 flex items-center justify-center">
               <Mail className="w-16 h-16 text-[#f59e0b]" />
             </div>
             <div className="p-6 text-center">
-              <h3 className="text-lg font-semibold text-neutral-900 mb-2">E-mail</h3>
+              <h3 className="text-lg font-semibold text-neutral-900 mb-2">Mensagem</h3>
               <p className="text-neutral-600 mb-4">Envie sua mensagem</p>
               <a 
-                href="mailto:goldensupra86@gmail.com"
-                className="bg-[#1e3a8a] hover:bg-[#1e40af] text-[#f59e0b] px-6 py-2 rounded-md inline-flex items-center justify-center gap-2 transition-all font-medium text-sm"
+                href="https://wa.me/5585996023538"
+                className="bg-[#1e3a8a] hover:bg-[#1e40af] text-[#f59e0b] px-6 py-2 rounded-md inline-flex items-center justify-center gap-2 transition-all font-medium"
               >
-                <span>goldensupra86@gmail.com</span>
+                <span>Enviar pelo WhatsApp</span>
               </a>
             </div>
           </div>

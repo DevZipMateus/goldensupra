@@ -58,7 +58,7 @@ const LocationSection = () => {
                 <div>
                   <h3 className="text-lg font-semibold text-neutral-900 mb-2">Contato Direto</h3>
                   <p className="text-neutral-600 mb-4">
-                    Entre em contato conosco para mais informações
+                    Entre em contato conosco pelo WhatsApp
                   </p>
                   <a 
                     href="https://wa.me/5585996023538?text=Olá! Gostaria de saber mais sobre suas peças automotivas."
@@ -66,7 +66,7 @@ const LocationSection = () => {
                     rel="noopener noreferrer"
                     className="bg-[#1e3a8a] hover:bg-[#1e40af] text-[#f59e0b] px-4 py-2 rounded-md inline-flex items-center gap-2 transition-all font-medium text-sm"
                   >
-                    <span>(85) 99602-3538</span>
+                    <span>Chamar no WhatsApp</span>
                   </a>
                 </div>
               </div>

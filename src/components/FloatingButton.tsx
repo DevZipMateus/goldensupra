@@ -25,7 +25,7 @@ const FloatingButton = () => {
   
   return (
     <div className={`fixed ${isMobile ? 'bottom-4 right-3' : 'bottom-8 right-8'} z-50`}>
-      {/* Contact Options */}
+      {/* Contact Options - All lead to WhatsApp */}
       <div className={`flex flex-col-reverse items-end mb-3 space-y-reverse space-y-2 transition-all duration-500 ${isOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'}`}>
         <a 
           href="https://wa.me/5585996023538" 
@@ -37,17 +37,17 @@ const FloatingButton = () => {
         </a>
         
         <a 
-          href="tel:+5585996023538" 
+          href="https://wa.me/5585996023538" 
           className="flex items-center bg-[#1e3a8a] text-[#f59e0b] px-4 py-2 rounded-md shadow-lg hover:bg-[#1e40af] transition-all duration-300 gap-2 font-medium"
         >
-          <span className="mr-1">Ligar</span>
+          <span className="mr-1">Conversar</span>
         </a>
         
         <a 
-          href="mailto:goldensupra86@gmail.com" 
+          href="https://wa.me/5585996023538" 
           className="flex items-center bg-[#1e3a8a] text-[#f59e0b] px-4 py-2 rounded-md shadow-lg hover:bg-[#1e40af] transition-all duration-300 gap-2 font-medium"
         >
-          <span className="mr-1">E-mail</span>
+          <span className="mr-1">Mensagem</span>
         </a>
       </div>
       

@@ -2,6 +2,7 @@
 import React from 'react';
 import { Clock, Phone } from 'lucide-react';
 import LocationMap from './LocationMap';
+import LocationCarousel from './LocationCarousel';
 
 const LocationSection = () => {
   return (
@@ -70,6 +71,21 @@ const LocationSection = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Location Carousel */}
+        <div className="mt-12">
+          <div className="text-center mb-8">
+            <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-2">
+              Nossa Loja
+            </h3>
+            <p className="text-gray-600">
+              Conheça nosso espaço e ambiente de trabalho
+            </p>
+          </div>
+          <div className="max-w-4xl mx-auto">
+            <LocationCarousel />
           </div>
         </div>
       </div>

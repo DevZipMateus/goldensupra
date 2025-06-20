@@ -1,9 +1,13 @@
+
 import React from 'react';
 import { Phone, Mail, MapPin } from 'lucide-react';
 import { useIsMobile } from '../hooks/use-mobile';
+
 const Contact = () => {
   const isMobile = useIsMobile();
-  return <section id="contact" className="section bg-neutral-100">
+
+  return (
+    <section id="contact" className="section bg-neutral-100">
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
@@ -61,7 +65,7 @@ const Contact = () => {
               </div>
               <div>
                 <h4 className="text-lg font-semibold text-neutral-900 mb-2">Endereço</h4>
-                <p className="text-neutral-600 mb-4">Av. D, 1317 - Conj. Ceará, Fortaleza - CE</p>
+                <p className="text-neutral-600 mb-4">Av. D, 1289 - Genibaú, Fortaleza - CE, 60533-602</p>
                 <a href="https://maps.app.goo.gl/yRimX4g3VtxZvwdJ9" target="_blank" rel="noopener noreferrer" className="text-[#f59e0b] hover:text-[#d97706] transition-colors underline">
                   Ver no Google Maps
                 </a>
@@ -96,6 +100,8 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Contact;

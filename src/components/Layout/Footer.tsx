@@ -39,7 +39,7 @@ const Footer = () => {
               </li>
               <li className="flex items-start">
                 <MapPin className="mr-3 mt-1 flex-shrink-0 text-[#f59e0b]" size={18} />
-                <span>Avenida D, 1289 - Fortaleza, CE</span>
+                <span>Av. D, 1289 - Genibaú, Fortaleza - CE</span>
               </li>
             </ul>
           </div>
